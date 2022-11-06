@@ -20,6 +20,12 @@ final class {{ module_info.name }}Presenter {
     var interactor: {{ module_info.name }}InteractorProtocol!
     var router: {{ module_info.name }}RouterProtocol!
 
+    init(view: {{ module_info.name }}ViewController, router: {{ module_info.name }}Router, interactor: {{ module_info.name }}Interactor) {
+        self.view = view
+        self.router = router
+        self.interactor = interactor
+    }
+
 }
 
 extension {{ module_info.name }}Presenter: {{ module_info.name }}PressenterInputProtocol {

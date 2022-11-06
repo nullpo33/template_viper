@@ -14,6 +14,8 @@ protocol {{ module_info.name }}ViewProtocol: AnyObject {
 
 class {{ module_info.name }}ViewController: UIViewController {
 
+    var presenter: {{ module_info.name }}PressenterInputProtocol!
+
     // MARK: Life cycle
 
     override func viewDidLoad() {
