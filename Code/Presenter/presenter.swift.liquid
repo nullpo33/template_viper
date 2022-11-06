@@ -7,7 +7,8 @@
 //
 
 protocol {{ module_info.name }}PressenterInputProtocol: AnyObject {
-
+    /// viewDidLoad
+    func viewDidLoad()
 }
 
 protocol {{ module_info.name }}PressenterOutputProtocol: AnyObject {
@@ -29,7 +30,9 @@ final class {{ module_info.name }}Presenter {
 }
 
 extension {{ module_info.name }}Presenter: {{ module_info.name }}PressenterInputProtocol {
-
+    func viewDidLoad() {
+        
+    }
 }
 
 extension {{ module_info.name }}Presenter: {{ module_info.name }}PressenterOutputProtocol {
