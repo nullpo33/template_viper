@@ -31,6 +31,7 @@ final class {{ module_info.name }}Router {
             interactor: interactor
         )
 
+        interactor.output = presenter
         view.presenter = presenter
 
         return view
