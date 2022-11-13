@@ -1,0 +1,40 @@
+//
+//  {{ module_info.name }}{{ module_info.file_name }}
+//  {{ module_info.project_name }}
+//
+//  Created by {{ developer.name }} on {{ date }}.
+//  Copyright © {{ year }} {{ developer.company }}. All rights reserved.
+//
+
+protocol {{ module_info.name }}PressenterInputProtocol: AnyObject {
+    /// viewDidLoad
+    func viewDidLoad()
+}
+
+protocol {{ module_info.name }}PressenterOutputProtocol: AnyObject {
+
+}
+
+final class {{ module_info.name }}Presenter {
+
+    weak var view: {{ module_info.name }}ViewProtocol?
+    var interactor: {{ module_info.name }}InteractorProtocol!
+    var router: {{ module_info.name }}RouterProtocol!
+
+    init(view: {{ module_info.name }}ViewController, router: {{ module_info.name }}Router, interactor: {{ module_info.name }}Interactor) {
+        self.view = view
+        self.router = router
+        self.interactor = interactor
+    }
+
+}
+
+extension {{ module_info.name }}Presenter: {{ module_info.name }}PressenterInputProtocol {
+    func viewDidLoad() {
+        
+    }
+}
+
+extension {{ module_info.name }}Presenter: {{ module_info.name }}PressenterOutputProtocol {
+
+}
