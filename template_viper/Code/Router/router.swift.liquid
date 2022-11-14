@@ -23,7 +23,7 @@ final class {{ module_info.name }}Router {
     static func assembleModules() -> UIViewController {
         let storyboard = UIStoryboard(name: "{{ module_info.name }}ViewController", bundle: nil)
         guard let view = storyboard.instantiateViewController(withIdentifier: "{{ module_info.name }}") as? {{ module_info.name }}ViewController else { return {{ module_info.name }}ViewController() }
-        let nav = ColumnNaavigationController(rootViewController: view)
+        let nav = UINavigationController(rootViewController: view)
 
         let router = {{ module_info.name }}Router(viewController: nav)
         let interactor = {{ module_info.name }}Interactor()
